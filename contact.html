@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Submit Complaint</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="branding">
+      <span class="globe">🌐</span>
+      <span class="title">Reporting Hub</span>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>📨 Submit Your Complaint</h1>
+      <p class="subheading">Help us take action by submitting the issue below</p>
+    </div>
+  </section>
+
+  <section class="info-box">
+    <form id="complaintForm" class="form-style">
+      <label for="name"><strong>Your Name:</strong></label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" />
+      <small id="nameError" class="error"></small>
+
+      <label for="email"><strong>Email Address:</strong></label>
+      <input type="text" id="email" name="email" placeholder="Enter your email" />
+      <small id="emailError" class="error"></small>
+
+      <label for="message"><strong>Description of Problem:</strong></label>
+      <textarea id="message" name="message" placeholder="Type your complaint here..."></textarea>
+      <small id="messageError" class="error"></small>
+
+      <div class="center-btn">
+        <button type="submit">Submit Complaint</button>
+      </div>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

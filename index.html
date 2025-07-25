@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Village Reporting Hub</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="branding">
+      <span class="globe">🌐</span>
+      <span class="title">Reporting Hub</span>
+    </div>
+    <nav class="nav-bar">
+      <a href="index.html">Home</a>
+      <a href="contact.html">Submit Complaint</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>🏡 Village Problems Online Reporting Hub</h1>
+      <p class="subheading">Making Rural Voices Heard — Instantly</p>
+    </div>
+  </section>
+
+  <main class="grid-container">
+    <div class="grid-item">
+      <p>
+        Our platform allows villagers to report real-world issues like broken pipelines, water scarcity,
+        and sanitation problems in just a few clicks.
+      </p>
+      <div class="issue-image-box">
+    <img src="images/broken.jpeg" alt="Broken Pipe" />
+  </div>
+    </div>
+    <div class="grid-item">
+      <p>
+        No more waiting for someone to notice — <strong>you raise your voice</strong>, and the system responds.
+      </p>
+      <div class="issue-image-box">
+    <img src="images/raise.jpeg" alt="Broken Pipe" />
+  </div>
+    </div>
+    <div class="grid-item">
+      <p>
+        <strong>Transparency, speed, and community effort</strong> are at the heart of Reporting Hub.
+      </p>
+      <div class="issue-image-box">
+    <img src="images/race.png" alt="Broken Pipe" />
+  </div>
+    </div>
+    <div class="grid-item">
+      <p>
+        <strong>Together</strong>, we ensure every citizen lives with dignity and access to quick action.
+      </p>
+      <div class="issue-image-box">
+    <img src="images/equal.jpeg" alt="Broken Pipe" />
+  </div>
+    </div>
+  </main>
+  <section class="todo-section">
+  <h2>📝 Community Task List</h2>
+  <p>Add urgent local problems or track village improvements:</p>
+  <div class="todo-container">
+    <input type="text" id="todo-input" placeholder="Enter task (e.g., Fix broken tap)" />
+    <button onclick="addTask()">Add Task</button>
+    <ul id="todo-list"></ul>
+  </div>
+</section>
+
+
+  <div class="center-btn">
+    <button onclick="window.location.href='contact.html'">Submit a Complaint</button>
+  </div>
+  <script>
+  function addTask() {
+    const input = document.getElementById("todo-input");
+    const taskText = input.value.trim();
+
+    if (taskText === "") {
+      alert("Please enter a task.");
+      return;
+    }
+
+    const li = document.createElement("li");
+    li.textContent = taskText;
+
+    const removeBtn = document.createElement("button");
+    removeBtn.textContent = "❌";
+    removeBtn.onclick = function () {
+      li.remove();
+    };
+
+    li.appendChild(removeBtn);
+    document.getElementById("todo-list").appendChild(li);
+    input.value = "";
+  }
+</script>
+
+</body>
+</html>
